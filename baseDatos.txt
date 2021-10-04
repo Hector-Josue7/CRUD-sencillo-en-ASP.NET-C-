@@ -1,0 +1,23 @@
+CREATE DATABASE tutorialCrud
+
+CREATE TABLE tbl_articulos(
+id_articulo INT IDENTITY,
+nombre VARCHAR(200) not null,
+precio money not null, -- float
+primary key(id_articulo)
+)
+
+
+
+
+-- recordar no incluir el campo id_articulo de la clave primaria en la sentancia insert para que no genere error, por ser 
+-- autoincremental
+
+INSERT INTO tbl_articulos(nombre, precio) VALUES('Televisores de 32 pulgadas', 4500),
+('Celular de 128 GB', 5000),
+('Juego de meza monopoly', 400),
+('Tren electrico', 7500),
+('Mochilas', 700),
+('Calcetines', 50),
+('Camisas polo', 250),
+('Pantalones Jean', 750)
